@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.lidiya.taxsystem.programmingcoursework.controller.TaxController">
+
+    <top>
+        <ToolBar>
+            <Button text="Import File" onAction="#importFile" />
+            <Button text="Validate Transactions" onAction="#validateTransactions" />
+            <Button text="Calculate Profit" onAction="#calculateProfit" />
+            <Button text="Delete Zero Profit Transactions" onAction="#deleteZeroProfitTransactions" />
+            <Button text="Calculate Tax" onAction="#calculateTax" />
+            <Button text="Update Invalid Record" onAction="#handleUpdateInvalid" />
+            <Button text="Delete Invalid Record" onAction="#handleDeleteInvalid" />
+        </ToolBar>
+    </top>
+
+    <center>
+        <TableView fx:id="transactionTable">
+            <columns>
+                <TableColumn fx:id="itemCodeColumn" text="Item Code" prefWidth="100"/>
+                <TableColumn fx:id="internalPriceColumn" text="Internal Price" prefWidth="100"/>
+                <TableColumn fx:id="discountColumn" text="Discount" prefWidth="80"/>
+                <TableColumn fx:id="salePriceColumn" text="Sale Price" prefWidth="100"/>
+                <TableColumn fx:id="quantityColumn" text="Quantity" prefWidth="80"/>
+                <TableColumn fx:id="checksumColumn" text="Checksum" prefWidth="80"/>
+                <TableColumn fx:id="profitColumn" text="Profit" prefWidth="100"/>
+                <TableColumn fx:id="taxColumn" text="Tax" prefWidth="80"/>
+            </columns>
+        </TableView>
+    </center>
+
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10"/>
+    </padding>
+
+</BorderPane>
